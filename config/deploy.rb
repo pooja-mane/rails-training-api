@@ -1,7 +1,7 @@
 require 'mina/rails'
 require 'mina/git'
-# require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
-# require 'mina/rvm'    # for rvm support. (https://rvm.io)
+#require 'mina/rbenv'  # for rbenv support. (https://rbenv.org)
+require 'mina/rvm'    # for rvm support. (https://rvm.io)
 
 # Basic settings:
 #   domain       - The hostname to SSH to.
@@ -33,10 +33,10 @@ set :user, 'ubuntu'
 task :remote_environment do
   # If you're using rbenv, use this to load the rbenv environment.
   # Be sure to commit your .ruby-version or .rbenv-version to your repository.
-  # invoke :'rbenv:load'
+  #invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
-  # invoke :'rvm:use', 'ruby-2.5.3@default'
+  invoke :'rvm:use', 'ruby-3.0.0@default'
 end
 
 # Put any custom commands you need to run at setup
@@ -44,7 +44,7 @@ end
 task :setup do
   # command %{rbenv install 2.5.3 --skip-existing}
   # command %{rvm install ruby-2.5.3}
-  # command %{gem install bundler}
+  command %{gem install bundler}
 end
 
 desc "Deploys the current version to the server."
