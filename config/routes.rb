@@ -12,6 +12,11 @@ Rails.application.routes.draw do
         resources :posts
       end
     end
+
+    namespace :v2 do
+      resources :products
+      resources :users
+    end
   end
 
   # resources :users
