@@ -4,7 +4,7 @@ module Api
       def index
         products = Product.where(category: 'Category1')
         render_success(
-          data: { producst: products, count: products.length },
+          data: { producst: products.map(&:short_response), count: products.length },
           message: I18n.t('products.list')
         )
       end
