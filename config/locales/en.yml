@@ -30,4 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  errors:
+    invalid_headers: 'Invalid Headers'
+    unauthorized: 'Unauthorized'
+  products:
+    list: 'Products fetched successfully.'
+  users:
+    list: 'Users fetched successfully.'
