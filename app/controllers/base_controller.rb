@@ -25,4 +25,9 @@ class BaseController < ApplicationController
   def invalid_header
     request.headers['client'].blank? || request.headers['uid'].blank?
   end
+
+  def serialize_resource(resources, serializer, root = nil, extra = {})
+    opts = { each_serializer: serializer, root: root }.merge(extra)
+    ActiveModelSerializers::SerializableResource.new(resources, opts) if resources
+  end
 end
