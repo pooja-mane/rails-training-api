@@ -4,7 +4,7 @@ module Api
       def index
         users = User.all
         render_success(
-          data: { users: users, count: users.length },
+          data: { users: users.map(&:short_response), count: users.length },
           message: I18n.t('users.list')
         )
       end

@@ -5,7 +5,7 @@ module Api
       def index
         products = Product.all
         render_success(
-          data: { products: products, count: products.length },
+          data: { products: products },
           message: I18n.t('products.list')
         )
       end

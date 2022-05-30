@@ -9,4 +9,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
 
+  def short_response
+    as_json(only: %i[id email name mobile_number])
+  end
 end
