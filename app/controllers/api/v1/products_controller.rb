@@ -15,7 +15,11 @@ module Api
 
         ## using as_json
         # render_success(
-        #   data: { producst: products.map(&:short_response) },
+        #   data: { producst: products.as_json(
+        #             only: %i[id name description category release_date price],
+        #             methods: %i[formated_release_date fomated_price]
+        #           )
+        #         },
         #   message: I18n.t('products.list')
         # )
 

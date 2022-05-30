@@ -13,7 +13,7 @@ module Api
 
         ## using as_json
         # render_success(
-        #   data: { users: users.map(&:short_response) },
+        #   data: { users: users.as_json(only: %i[id email]) },
         #   message: I18n.t('users.list')
         # )
 
