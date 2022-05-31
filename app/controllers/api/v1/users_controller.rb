@@ -23,6 +23,13 @@ module Api
         #   message: I18n.t('users.list')
         # )
       end
+
+      def show
+        user = User.find(params[:id])
+
+        render_success(data: { user: serialize_resource(user, Api::V1::UserSerializer) },
+                       message: I18n.t('users.show.success'))
+      end
     end
   end
 end

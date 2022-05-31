@@ -37,3 +37,5 @@ en:
     list: 'Products fetched successfully.'
   users:
     list: 'Users fetched successfully.'
+    show:
+      success: 'User fetched successfully.'
