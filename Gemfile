@@ -47,6 +47,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rspec_api_documentation'
   gem 'rspec-rails'
+  gem 'faker'
 end
 
 group :development do
