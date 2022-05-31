@@ -19,6 +19,10 @@ Rails.application.routes.draw do
     end
   end
 
+  api_version(module: "V1", header: {name: "Accept", value: "application/rails-training.in; version=1"}) do
+    resources :users
+  end
+
   # resources :users
   # resources :products
 end
