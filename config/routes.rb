@@ -23,6 +23,6 @@ Rails.application.routes.draw do
     resources :users
   end
 
-  # resources :users
-  # resources :products
+  resources :users
+  resources :products
 end
